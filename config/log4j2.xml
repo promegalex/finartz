@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration monitorInterval="30" shutdownHook="disable">
+    <Properties>
+        <Property name="log-name">ticket</Property>
+    </Properties>
+    <Appenders>
+        <Console name="Console-Appender" target="SYSTEM_OUT">
+            <PatternLayout>
+                <pattern>[%-5level] %d{dd/MM/yyyy HH:mm:ss.SSS} [%t] [%M] %clr{%-20.70c} - %msg%n</pattern>
+            </PatternLayout>
+        </Console>
+    </Appenders>
+    <Loggers>
+        <Root level="DEBUG">
+            <AppenderRef ref="Console-Appender"/>
+        </Root>
+    </Loggers>
+</Configuration>
