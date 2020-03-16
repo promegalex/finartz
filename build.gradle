@@ -1,7 +1,19 @@
+buildscript {
+    repositories {
+        mavenCentral()
+        jcenter()
+    }
+    dependencies {
+        classpath('gradle.plugin.com.palantir.gradle.docker:gradle-docker:0.22.2')
+    }
+}
+
 plugins {
     id 'org.springframework.boot' version '2.2.4.RELEASE'
     id 'io.spring.dependency-management' version '1.0.9.RELEASE'
     id 'java'
+    id 'com.palantir.docker' version '0.22.2'
+
 }
 
 group = 'com.finartz'
@@ -28,7 +40,6 @@ dependencies {
     implementation group: 'org.springframework.boot', name: 'spring-boot-starter-actuator'
     implementation group: 'io.springfox', name: 'springfox-swagger2', version: '2.9.2'
     implementation group: 'org.codehaus.jackson', name: 'jackson-mapper-asl', version: '1.9.6'
-    implementation group: 'gradle.plugin.com.palantir.gradle.docker', name: 'gradle-docker', version: '0.19.2'
 
     compileOnly 'org.projectlombok:lombok'
     annotationProcessor 'org.projectlombok:lombok'
@@ -40,8 +51,4 @@ dependencies {
 
 test {
     useJUnitPlatform()
-}
-
-plugins {
-    id 'com.palantir.docker' version '0.19.2'
 }
