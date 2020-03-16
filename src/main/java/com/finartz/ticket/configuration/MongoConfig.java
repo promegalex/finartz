@@ -14,7 +14,7 @@ import org.springframework.data.mongodb.core.convert.MappingMongoConverter;
 import org.springframework.data.mongodb.core.mapping.MongoMappingContext;
 
 /**
- * Created by promegalex on 11.03.2020 17:27
+ * Created by promegalex on 12.03.2020 17:27
  */
 @Configuration
 public class MongoConfig {
@@ -24,7 +24,7 @@ public class MongoConfig {
 
         MongoClientOptions mongoClientOptions = MongoClientOptions.builder().build();
 
-        return new MongoClient(new ServerAddress("127.0.0.1", 27017), mongoClientOptions);
+        return new MongoClient(new ServerAddress("mongo", 27017), mongoClientOptions);
     }
 
     @Bean
