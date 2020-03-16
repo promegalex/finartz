@@ -20,10 +20,6 @@ import java.util.HashSet;
 @EnableSwagger2
 @SuppressWarnings("unchecked")
 public class SwaggerConfig {
-
-    @Value("${swagger.schemes}")
-    private String schemas;
-
     @Bean
     public Docket api() {
         return new Docket(DocumentationType.SWAGGER_2)

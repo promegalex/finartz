@@ -1,7 +1,7 @@
 version: '3'
 services:
   mongo:
-    container_name: mongo_finartz
+    container_name: mongo
     image: mongo:3.6
     restart: always
     ports:
@@ -9,13 +9,12 @@ services:
     hostname: mongo
 
   data-service:
-    image: finartz:latest
+    image: ticket-0.0.1:latest
     links:
       - mongo
-    environment:
-      - SPRING_DATA_MONGODB_HOST=mongo
+#    environment:
+#      - SPRING_DATA_MONGODB_HOST=mongo
     depends_on:
       - mongo
-      - redis
     ports:
       - "8080:8080"

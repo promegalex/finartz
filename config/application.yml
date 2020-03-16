@@ -11,21 +11,3 @@ springfox:
     swagger:
       v2:
         path: /api/swagger.json
-
-swagger:
-  version: 2.0
-  info:
-    description:
-    version: 1.0.2
-    title: Rest Api
-    termsOfService: https://www.finartz.com
-    contact:
-      name: finartz
-      email: admin@finartz.com
-      url: https://www.finartz.com/
-      license:
-        name: Apache 2.0
-        url: http://www.apache.org/licenses/LICENSE-2.0.html
-  host: www.finartz.com/
-  basePath: /api
-  schemes: http,https

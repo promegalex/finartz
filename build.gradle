@@ -52,3 +52,19 @@ dependencies {
 test {
     useJUnitPlatform()
 }
+docker {
+    dependsOn build
+    name "${project.name}-${project.version}"
+    files file("${project.rootDir}/Dockerfile")
+    files jar.archivePath
+    copySpec.with {
+        from("${project.projectDir}") {
+            include 'config/log4j2.xml'
+            include 'config/application.yml'
+            into ''
+        }
+    }
+    buildArgs(['JAR_FILE': "${jar.archiveName}",
+               'CONF_DIR': 'config',
+    ])
+}
