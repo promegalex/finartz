@@ -8,6 +8,9 @@ server:
 
 springfox:
   documentation:
+    swagger-ui:
+      enabled: true
     swagger:
+      enabled: true
       v2:
-        path: /api/swagger.json
+        path: /finartz/swagger-ui.html

@@ -18,13 +18,12 @@ import java.util.HashSet;
  */
 @Configuration
 @EnableSwagger2
-@SuppressWarnings("unchecked")
 public class SwaggerConfig {
     @Bean
     public Docket api() {
         return new Docket(DocumentationType.SWAGGER_2)
                 .select()
-                .apis(RequestHandlerSelectors.any())
+                .apis(RequestHandlerSelectors.basePackage("com.finartz.ticket.controller"))
                 .paths(PathSelectors.any())
                 .build();
     }

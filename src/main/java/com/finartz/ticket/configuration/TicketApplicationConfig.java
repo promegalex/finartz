@@ -12,14 +12,13 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 /**
  * Created by promegalex on 11.03.2020 17:27
  */
-@EnableAutoConfiguration
+//@EnableAutoConfiguration
 @Configuration
-@EnableSwagger2
-@ComponentScan(basePackages = {
-        "com.finartz.ticket"
-})
-@EnableMongoRepositories({
-        "com.finartz.ticket.repository"
-})
+//@ComponentScan(basePackages = {
+//        "com.finartz.ticket"
+//})
+//@EnableMongoRepositories({
+//        "com.finartz.ticket.repository"
+//})
 public class TicketApplicationConfig {
 }

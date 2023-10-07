@@ -24,7 +24,7 @@ public class MongoConfig {
 
         MongoClientOptions mongoClientOptions = MongoClientOptions.builder().build();
 
-        return new MongoClient(new ServerAddress("mongo", 27017), mongoClientOptions);
+        return new MongoClient(new ServerAddress("127.0.0.1", 27017), mongoClientOptions);
     }
 
     @Bean
